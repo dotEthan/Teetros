@@ -1,0 +1,197 @@
+* {
+  box-sizing: border-box;
+}
+
+.background {
+  background-color: grey;
+  text-align: center;
+  background: url("http://www.paperstreetwebdesigns.ca/stored/teetros/bg.jpg");
+  background-size: contain;
+  heigth: 100vh;
+}
+
+.gameboard {
+  width: 240px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.top {
+  display: flex;
+}
+
+.top__start {
+  background: #efeeee;
+  border: 3px solid #4B0082;
+  margin: 10px;
+  padding: 5px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9em;
+  width: 50%;
+}
+.top__start.on {
+  background: #c18ead;
+}
+.top__start:hover {
+  background: #ffdcec;
+}
+.top__start:active {
+  background: #850050;
+}
+
+.top__right {
+  width: 50%;
+  font-size: .6em;
+}
+
+.top__stop {
+  padding: 2% 4%;
+  margin: 5px;
+  width: 100%;
+  background: #efeeee;
+  border: 2px solid #4B0082;
+}
+.top__stop:nth-child(even) {
+  margin-top: 0;
+}
+
+.scoreboard {
+  width: 100%;
+  height: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 5px;
+  justify-items: center;
+  align-items: flex-end;
+}
+
+.scoreboard__each {
+  background: #efeeee;
+  display: grid;
+  grid-template-column: 1fr;
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  border-radius: 5px 5px 0 0;
+  font-size: .6em;
+}
+
+.next {
+  position: absolute;
+  top: 95px;
+  left: 0px;
+  width: 75px;
+  height: 75px;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+@media screen and (min-width: 768px) {
+  .next {
+    left: -100px;
+    background: #efeeee;
+    border-radius: 5px;
+  }
+}
+
+.next__pic {
+  width: 50px;
+  height: 50px;
+  position: relative;
+}
+
+.next__each {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  display: none;
+}
+.next__each.on {
+  display: block;
+}
+
+.t {
+  background: url("http://www.paperstreetwebdesigns.ca/stored/teetros/t.png");
+}
+
+.o {
+  background: url("http://www.paperstreetwebdesigns.ca/stored/teetros/square.png");
+}
+
+.i {
+  background: url("http://www.paperstreetwebdesigns.ca/stored/teetros/line.png");
+}
+
+.j {
+  background: url("http://www.paperstreetwebdesigns.ca/stored/teetros/j.png");
+}
+
+.l {
+  background: url("http://www.paperstreetwebdesigns.ca/stored/teetros/l.png");
+}
+
+.s {
+  background: url("http://www.paperstreetwebdesigns.ca/stored/teetros/s.png");
+}
+
+.z {
+  background: url("http://www.paperstreetwebdesigns.ca/stored/teetros/z.png");
+}
+
+.next__text {
+  color: #efeeee;
+  font-size: .7em;
+}
+@media screen and (min-width: 768px) {
+  .next__text {
+    color: #112;
+  }
+}
+
+.hboard {
+  display: none;
+  background: #efeeee;
+  padding: 5px;
+  width: 50%;
+  margin: 5px auto;
+  border-radius: 5px;
+}
+.hboard.on {
+  display: block;
+}
+
+.footer {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: space-between;
+  padding: 10px 0 25px;
+}
+
+.footer__each {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 5% 3%;
+  background: #efeeee;
+  border-radius: 5px;
+  font-size: 1.4em;
+  cursor: pointer;
+}
+.footer__each.reverse {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.each--text {
+  font-size: .8em;
+  background: rgba(239, 238, 238, 0.5);
+  padding: 5px;
+  border-radius: 5px;
+}
+.each--text .letters {
+  font-size: .8em;
+}
